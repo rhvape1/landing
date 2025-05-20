@@ -12,11 +12,23 @@
       margin: 0;
       min-height: 100vh;
       font-family: 'Orbitron', sans-serif;
-      background: url('assets/bg.jpg') no-repeat center center fixed;
+      background: url('assets/bg.jpg') no-repeat center top fixed;
       background-size: cover;
       background-color: #000011;
       color: #cce7ff;
       text-align: center;
+    }
+
+    .overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 30, 0.4);
+      z-index: 0;
+    }
+
+    body > *:not(.overlay) {
+      position: relative;
+      z-index: 1;
     }
 
     header {
@@ -89,6 +101,8 @@
   </style>
 </head>
 <body>
+  <div class="overlay"></div>
+
   <header>
     <h1>NORTH SAFECHECK</h1>
     <h2>MAIN GATEWAY TO NORTH GROUPS COMMUNITY</h2>
@@ -99,7 +113,9 @@
       <a href="#">ABOUT US</a>
     </div>
   </header>
+
   <p>North Groups is the most popular Telegram dark community in Estonia. Founded in January 2024. Already over 10,000 active users.</p>
+
   <footer>&copy; North Groups 2025 · Based in Estonia</footer>
 
   <script>
