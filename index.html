@@ -32,9 +32,15 @@
 
     header {
       text-align: center;
-      margin-top: 100px;
+      margin-top: 80px;
       z-index: 1;
       position: relative;
+    }
+
+    .logo {
+      max-width: 120px;
+      margin: 0 auto 30px;
+      filter: drop-shadow(0 0 10px rgba(0,204,255,0.5));
     }
 
     h1 {
@@ -75,17 +81,26 @@
       color: #00ccff;
       text-decoration: none;
       font-weight: 500;
-      transition: 0.3s;
+      transition: 0.3s ease;
       box-shadow: 0 0 10px #00ccff88;
     }
 
     .buttons a:hover {
       background: #00ccff;
       color: #000;
+      transform: scale(1.05);
+    }
+
+    .divider {
+      width: 60px;
+      height: 2px;
+      background: #00ccff88;
+      margin: 40px auto 20px;
+      border-radius: 2px;
     }
 
     .description {
-      margin: 60px auto 30px;
+      margin: 40px auto 30px;
       max-width: 720px;
       text-align: center;
       color: #cce0f0;
@@ -114,12 +129,16 @@
       .description {
         padding: 0 20px;
       }
+      .logo {
+        max-width: 90px;
+      }
     }
   </style>
 </head>
 <body>
   <div class="overlay"></div>
   <header>
+    <img class="logo" src="/assets/dragon-logo.png" alt="North Groups Logo">
     <h1>NORTH SAFECHECK</h1>
     <h2>Main gateway to North Groups Community</h2>
     <div class="sub-counter">+10,000 ACTIVE MEMBERS</div>
@@ -129,6 +148,7 @@
       <a href="#">ABOUT US</a>
     </div>
   </header>
+  <div class="divider"></div>
   <section class="description">
     North Groups is the most popular Telegram dark community in Estonia. Founded in January 2024. Already over 10,000 active users.
   </section>
