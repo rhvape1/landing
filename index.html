@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>North Safecheck</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -13,104 +15,87 @@
     }
 
     body {
-      font-family: 'Inter', sans-serif;
+      font-family: 'Orbitron', sans-serif;
       background: url('/assets/bg-runes.jpg') no-repeat center center fixed;
       background-size: cover;
       color: #e0f4ff;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+      text-align: center;
     }
 
     .overlay {
       position: fixed;
       inset: 0;
-      background: rgba(0, 0, 30, 0.45);
+      background: rgba(0, 0, 30, 0.4);
       z-index: 0;
     }
 
-    header {
-      text-align: center;
-      margin-top: 80px;
-      z-index: 1;
+    main {
       position: relative;
+      z-index: 1;
+      padding: 140px 20px 60px;
     }
 
     h1 {
-      font-family: 'Orbitron', sans-serif;
-      font-size: 2.8em;
+      font-size: 3em;
+      font-weight: 700;
       color: #00ccff;
-      text-shadow: 0 0 10px #00ccff88;
+      margin-bottom: 0.3em;
+      text-shadow: 0 0 10px #00ccff80;
     }
 
     h2 {
+      font-size: 1.2em;
       font-weight: 400;
-      font-size: 1.1em;
       color: #b0d0f0;
-      margin-top: 10px;
+      margin-bottom: 1.5em;
     }
 
-    .sub-counter {
-      margin: 24px 0 40px;
+    .counter {
+      font-size: 1.1em;
+      margin-bottom: 2em;
       color: #00ccff;
-      font-weight: 500;
-      font-size: 1em;
       text-shadow: 0 0 6px #00ccff88;
     }
 
-    .buttons {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 20px;
-      z-index: 1;
-    }
-
     .buttons a {
+      display: inline-block;
+      margin: 10px;
       padding: 14px 28px;
+      font-size: 1em;
+      color: #00ccff;
       border: 1px solid #00ccff;
       border-radius: 12px;
-      background: transparent;
-      color: #00ccff;
       text-decoration: none;
-      font-weight: 500;
-      transition: 0.3s ease;
+      background-color: transparent;
       box-shadow: 0 0 10px #00ccff88;
+      transition: all 0.3s;
     }
 
     .buttons a:hover {
-      background: #00ccff;
+      background-color: #00ccff;
       color: #000;
-      transform: scale(1.05);
     }
 
-    .divider {
-      width: 60px;
-      height: 2px;
-      background: #00ccff88;
-      margin: 40px auto 20px;
-      border-radius: 2px;
+    .line-separator {
+      width: 30%;
+      height: 1px;
+      margin: 60px auto 20px;
+      background: rgba(0, 204, 255, 0.2);
+      box-shadow: 0 0 8px rgba(0, 204, 255, 0.15);
     }
 
-    .description {
-      margin: 40px auto 30px;
-      max-width: 720px;
-      text-align: center;
-      color: #cce0f0;
-      font-size: 0.95em;
+    p {
+      max-width: 700px;
+      margin: 60px auto 20px;
+      font-size: 1em;
       line-height: 1.6;
-      z-index: 1;
-      position: relative;
+      color: #cce0f0;
     }
 
     footer {
-      text-align: center;
-      font-size: 0.85em;
+      font-size: 0.9em;
+      margin-top: 60px;
       color: #888;
-      padding: 40px 0;
-      z-index: 1;
-      position: relative;
     }
 
     @media (max-width: 768px) {
@@ -120,7 +105,7 @@
         padding: 12px 20px;
         font-size: 0.95em;
       }
-      .description {
+      p {
         padding: 0 20px;
       }
     }
@@ -128,22 +113,20 @@
 </head>
 <body>
   <div class="overlay"></div>
-  <header>
+  <main>
     <h1>NORTH SAFECHECK</h1>
     <h2>Main gateway to North Groups Community</h2>
-    <div class="sub-counter">+10,000 ACTIVE MEMBERS</div>
+    <div class="counter">+10,000 ACTIVE MEMBERS</div>
     <div class="buttons">
       <a href="#">JOIN COMMUNITY</a>
       <a href="#">NEWS</a>
       <a href="#">ABOUT US</a>
     </div>
-  </header>
-  <div class="divider"></div>
-  <section class="description">
-    North Groups is the most popular Telegram dark community in Estonia. Founded in January 2024. Already over 10,000 active users.
-  </section>
-  <footer>
-    &copy; North Groups 2025. All rights reserved. Multilingual support coming soon.
-  </footer>
+    <div class="line-separator"></div>
+    <p>North Groups is the most popular Telegram dark community in Estonia. Founded in January 2024. Already over 10,000 active users.</p>
+    <footer>
+      &copy; North Groups 2025. All rights reserved. Multilingual support coming soon.
+    </footer>
+  </main>
 </body>
 </html>
