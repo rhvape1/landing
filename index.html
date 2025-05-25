@@ -58,18 +58,21 @@
     }
 
     .buttons a {
-      display: inline-block;
-      margin: 10px;
-      padding: 14px 28px;
-      font-size: 1em;
-      color: #00ccff;
-      border: 1px solid #00ccff;
-      border-radius: 12px;
-      text-decoration: none;
-      background-color: transparent;
-      box-shadow: 0 0 10px #00ccff88;
-      transition: all 0.3s;
-    }
+  display: inline-flex; /* вместо inline-block */
+  align-items: center;  /* выравнивание иконки и текста */
+  gap: 10px;             /* расстояние между иконкой и текстом */
+  margin: 10px;
+  padding: 14px 28px;
+  font-size: 1em;
+  color: #00ccff;
+  border: 1px solid #00ccff;
+  border-radius: 12px;
+  text-decoration: none;
+  background-color: transparent;
+  box-shadow: 0 0 10px #00ccff88;
+  transition: all 0.3s;
+}
+
 
     .buttons a:hover {
       background-color: #00ccff;
