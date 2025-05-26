@@ -1,43 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- ... HEAD И СТИЛИ БЕЗ ИЗМЕНЕНИЙ ... -->
-<body>
-  <div class="overlay"></div>
-  <main>
-    <h1>NORTH GROUPS</h1>
-    <h2>Main gateway to North Groups Community</h2>
-    <div class="counter">+10,000 ACTIVE MEMBERS</div>
-    <div class="buttons">
-      <a href="#join">JOIN COMMUNITY</a>
-      <a href="#">NEWS</a>
-      <a href="#about">ABOUT US</a>
-    </div>
-
-    <section class="stats-section" style="margin: 60px auto; display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; max-width: 1000px;">
-      <div style="text-align: center; min-width: 120px;">
-        <div style="font-size: 2em; font-weight: 700; color: #00ccff;">+10,000</div>
-        <div style="color: #b0d0f0;">Active Members</div>
-      </div>
-      <div style="text-align: center; min-width: 120px;">
-        <div style="font-size: 2em; font-weight: 700; color: #00ccff;">120</div>
-        <div style="color: #b0d0f0;">Flagged Scammers</div>
-      </div>
-      <div style="text-align: center; min-width: 120px;">
-        <div style="font-size: 2em; font-weight: 700; color: #00ccff;">15</div>
-        <div style="color: #b0d0f0;">Group Clusters</div>
-      </div>
-      <div style="text-align: center; min-width: 120px;">
-        <div style="font-size: 2em; font-weight: 700; color: #00ccff;">Estonia 🇪🇪</div>
-        <div style="color: #b0d0f0;">Based Infrastructure</div>
-      </div>
-      <div style="text-align: center; min-width: 120px;">
-        <div style="font-size: 2em; font-weight: 700; color: #00ccff;">2024</div>
-        <div style="color: #b0d0f0;">Since</div>
-      </div>
-    </section>
-
-  <!DOCTYPE html>
-<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -183,6 +145,8 @@ p {
 }
   </style>
 </head>
+
+
 <body>
   <div class="overlay"></div>
   <main>
@@ -191,9 +155,32 @@ p {
     <div class="counter">+10,000 ACTIVE MEMBERS</div>
     <div class="buttons">
       <a href="#join">JOIN COMMUNITY</a>
-      <a href="#">NEWS</a>  
-      <a href="#about">ABOUT US</a>   
+      <a href="#">NEWS</a>
+      <a href="#about">ABOUT US</a>
     </div>
+
+    <section class="stats-section" style="margin: 60px auto; display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; max-width: 1000px;">
+      <div style="text-align: center; min-width: 120px;">
+        <div style="font-size: 2em; font-weight: 700; color: #00ccff;">+10,000</div>
+        <div style="color: #b0d0f0;">Active Members</div>
+      </div>
+      <div style="text-align: center; min-width: 120px;">
+        <div style="font-size: 2em; font-weight: 700; color: #00ccff;">120</div>
+        <div style="color: #b0d0f0;">Flagged Scammers</div>
+      </div>
+      <div style="text-align: center; min-width: 120px;">
+        <div style="font-size: 2em; font-weight: 700; color: #00ccff;">15</div>
+        <div style="color: #b0d0f0;">Group Clusters</div>
+      </div>
+      <div style="text-align: center; min-width: 120px;">
+        <div style="font-size: 2em; font-weight: 700; color: #00ccff;">Estonia 🇪🇪</div>
+        <div style="color: #b0d0f0;">Based Infrastructure</div>
+      </div>
+      <div style="text-align: center; min-width: 120px;">
+        <div style="font-size: 2em; font-weight: 700; color: #00ccff;">2024</div>
+        <div style="color: #b0d0f0;">Since</div>
+      </div>
+    </section>
     <div class="line-separator"></div>
 
     <section class="about-section" id="about">
