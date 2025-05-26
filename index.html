@@ -125,6 +125,38 @@
     p {
       padding: 0 20px;
     }
+
+    .community-logos {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  animation: fadeIn 0.6s ease forwards;
+}
+
+.logos-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.logos-container img {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.logos-container img:hover {
+  transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
   }
 </style>
 </head>
@@ -135,6 +167,18 @@
     <h2>Main gateway to North Groups Community</h2>
     <div class="counter">+10,000 ACTIVE MEMBERS</div>
     <div class="buttons">
+
+      <section class="community-logos" id="community-logos" style="display: none;">
+  <div class="logos-container">
+    <a href="#"><img src="/assets/logo-green.png" alt="Green Group"></a>
+    <a href="#"><img src="/assets/logo-purple.png" alt="Purple Group"></a>
+    <a href="#"><img src="/assets/logo-blue.png" alt="Blue Group"></a>
+    <a href="#"><img src="/assets/logo-lightblue.png" alt="News Channel"></a>
+    <a href="#"><img src="/assets/logo-keskus.png" alt="Keskus Bar"></a>
+  </div>
+</section>
+
+      
   <a href="#" class="btn">JOIN COMMUNITY</a>
   <a href="#">NEWS</a>
   <a href="#">ABOUT US</a>
@@ -145,5 +189,14 @@
       &copy; North Groups 2025. All rights reserved. Multilingual support coming soon.
     </footer>
   </main>
+  <script>
+  document.querySelector('.buttons a').addEventListener('click', function(e) {
+    e.preventDefault();
+    const logosBlock = document.getElementById('community-logos');
+    logosBlock.style.display = 'flex';
+    logosBlock.scrollIntoView({ behavior: 'smooth' });
+  });
+</script>
+
 </body>
 </html>
