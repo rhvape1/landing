@@ -1,164 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>North Safecheck</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
-<style>
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet"/>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-  body {
-    font-family: 'Orbitron', sans-serif;
-    background: url('/assets/bg-runes.jpg') no-repeat center center fixed;
-    background-size: cover;
-    color: #e0f4ff;
-    text-align: center;
-  }
+    body {
+      font-family: 'Orbitron', sans-serif;
+      background: url('/assets/bg-runes.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #e0f4ff;
+      text-align: center;
+    }
 
-  .overlay {
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 30, 0.4);
-    z-index: 0;
-  }
+    .overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 30, 0.4);
+      z-index: 0;
+    }
 
-  main {
-    position: relative;
-    z-index: 1;
-    padding: 140px 20px 60px;
-  }
+    main {
+      position: relative;
+      z-index: 1;
+      padding: 140px 20px 60px;
+    }
 
-  h1 {
-    font-size: 3em;
-    font-weight: 700;
-    color: #00ccff;
-    margin-bottom: 0.3em;
-    text-shadow: 0 0 10px #00ccff80;
-  }
+    h1 {
+      font-size: 3em;
+      font-weight: 700;
+      color: #00ccff;
+      margin-bottom: 0.3em;
+      text-shadow: 0 0 10px #00ccff80;
+    }
 
-  h2 {
-    font-size: 1.2em;
-    font-weight: 400;
-    color: #b0d0f0;
-    margin-bottom: 1.5em;
-  }
+    h2 {
+      font-size: 1.2em;
+      font-weight: 400;
+      color: #b0d0f0;
+      margin-bottom: 1.5em;
+    }
 
-  .counter {
-    font-size: 1.1em;
-    margin-bottom: 2em;
-    color: #00ccff;
-    text-shadow: 0 0 6px #00ccff88;
-  }
-
-  .buttons a {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    margin: 10px;
-    padding: 14px 28px;
-    font-size: 1em;
-    color: #00ccff;
-    border: 1px solid #00ccff;
-    border-radius: 12px;
-    text-decoration: none;
-    background-color: transparent;
-    box-shadow: 0 0 10px #00ccff88;
-    transition: all 0.3s;
-    height: 52px; /* одинаковая высота для всех кнопок */
-  }
-
-  .buttons a img {
-    width: 20px;
-    height: 20px;
-    object-fit: contain;
-  }
-
-  .buttons a:hover {
-    background-color: #00ccff;
-    color: #000;
-  }
-
-  .line-separator {
-    width: 30%;
-    height: 1px;
-    margin: 60px auto 20px;
-    background: rgba(0, 204, 255, 0.2);
-    box-shadow: 0 0 8px rgba(0, 204, 255, 0.15);
-  }
-
-  p {
-    max-width: 700px;
-    margin: 60px auto 20px;
-    font-size: 1em;
-    line-height: 1.6;
-    color: #cce0f0;
-  }
-
-  footer {
-    font-size: 0.9em;
-    margin-top: 60px;
-    color: #888;
-  }
-
-  @media (max-width: 768px) {
-    h1 { font-size: 2.2em; }
-    h2 { font-size: 1em; }
+    .counter {
+      font-size: 1.1em;
+      margin-bottom: 2em;
+      color: #00ccff;
+      text-shadow: 0 0 6px #00ccff88;
+    }
 
     .buttons a {
-      padding: 12px 20px;
-      font-size: 0.95em;
-      height: auto;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin: 10px;
+      padding: 14px 28px;
+      font-size: 1em;
+      color: #00ccff;
+      border: 1px solid #00ccff;
+      border-radius: 12px;
+      text-decoration: none;
+      background-color: transparent;
+      box-shadow: 0 0 10px #00ccff88;
+      transition: all 0.3s;
+      height: 52px;
+    }
+
+    .buttons a:hover {
+      background-color: #00ccff;
+      color: #000;
     }
 
     .line-separator {
-      width: 60%; /* увеличена для мобилок */
+      width: 30%;
+      height: 1px;
+      margin: 60px auto 20px;
+      background: rgba(0, 204, 255, 0.2);
+      box-shadow: 0 0 8px rgba(0, 204, 255, 0.15);
     }
 
     p {
-      padding: 0 20px;
+      max-width: 700px;
+      margin: 60px auto 20px;
+      font-size: 1em;
+      line-height: 1.6;
+      color: #cce0f0;
     }
 
     .community-logos {
-  margin-top: 50px;
-  display: flex;
-  justify-content: center;
-  animation: fadeIn 0.6s ease forwards;
-}
+      margin-top: 50px;
+      display: none;
+      justify-content: center;
+      animation: fadeIn 0.6s ease forwards;
+    }
 
-.logos-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-  align-items: center;
-}
+    .logos-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      align-items: center;
+    }
 
-.logos-container img {
-  height: 80px;
-  width: 80px;
-  border-radius: 50%;
-  transition: transform 0.3s ease;
-}
+    .logos-container img {
+      height: 80px;
+      width: 80px;
+      border-radius: 50%;
+      transition: transform 0.3s ease;
+    }
 
-.logos-container img:hover {
-  transform: scale(1.1);
-}
+    .logos-container img:hover {
+      transform: scale(1.1);
+    }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
 
-  }
-</style>
+    footer {
+      font-size: 0.9em;
+      margin-top: 60px;
+      color: #888;
+    }
+
+    @media (max-width: 768px) {
+      h1 { font-size: 2.2em; }
+      h2 { font-size: 1em; }
+      .buttons a {
+        padding: 12px 20px;
+        font-size: 0.95em;
+        height: auto;
+      }
+      .line-separator { width: 60%; }
+      p { padding: 0 20px; }
+    }
+  </style>
 </head>
 <body>
   <div class="overlay"></div>
@@ -166,37 +152,39 @@
     <h1>NORTH GROUPS</h1>
     <h2>Main gateway to North Groups Community</h2>
     <div class="counter">+10,000 ACTIVE MEMBERS</div>
+
     <div class="buttons">
+      <a href="#" class="btn">JOIN COMMUNITY</a>
+      <a href="#">NEWS</a>
+      <a href="#">ABOUT US</a>
+    </div>
 
-      <section class="community-logos" id="community-logos" style="display: none;">
-  <div class="logos-container">
-    <a href="#"><img src="/assets/logo-green.png" alt="Green Group"></a>
-    <a href="#"><img src="/assets/logo-purple.png" alt="Purple Group"></a>
-    <a href="#"><img src="/assets/logo-blue.png" alt="Blue Group"></a>
-    <a href="#"><img src="/assets/logo-lightblue.png" alt="News Channel"></a>
-    <a href="#"><img src="/assets/logo-keskus.png" alt="Keskus Bar"></a>
-  </div>
-</section>
-
-      
-  <a href="#" class="btn">JOIN COMMUNITY</a>
-  <a href="#">NEWS</a>
-  <a href="#">ABOUT US</a>
-</div>
     <div class="line-separator"></div>
+
     <p>North Groups is the most popular Telegram dark community in Estonia. Founded in January 2024. Already over 10,000 active users.</p>
+
+    <section class="community-logos" id="community-logos">
+      <div class="logos-container">
+        <a href="#"><img src="/assets/logo-green.png" alt="Green Group"></a>
+        <a href="#"><img src="/assets/logo-purple.png" alt="Purple Group"></a>
+        <a href="#"><img src="/assets/logo-blue.png" alt="Blue Group"></a>
+        <a href="#"><img src="/assets/logo-lightblue.png" alt="News Channel"></a>
+        <a href="#"><img src="/assets/logo-keskus.png" alt="Keskus Bar"></a>
+      </div>
+    </section>
+
     <footer>
       &copy; North Groups 2025. All rights reserved. Multilingual support coming soon.
     </footer>
   </main>
-  <script>
-  document.querySelector('.buttons a').addEventListener('click', function(e) {
-    e.preventDefault();
-    const logosBlock = document.getElementById('community-logos');
-    logosBlock.style.display = 'flex';
-    logosBlock.scrollIntoView({ behavior: 'smooth' });
-  });
-</script>
 
+  <script>
+    document.querySelector('.buttons a.btn').addEventListener('click', function(e) {
+      e.preventDefault();
+      const logosBlock = document.getElementById('community-logos');
+      logosBlock.style.display = 'flex';
+      logosBlock.scrollIntoView({ behavior: 'smooth' });
+    });
+  </script>
 </body>
 </html>
