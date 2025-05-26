@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>North Safecheck</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -96,45 +96,53 @@
       color: #cce0f0;
     }
 
-.community-logos {
-  margin-top: 50px;
-  display: flex;
-  justify-content: center;
-  opacity: 0;
-  transform: translateY(20px);
-  pointer-events: none;
-  transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-    .logos-container {
+    .about-section {
+      margin-top: 40px;
       display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
+      flex-direction: column;
       align-items: center;
+      gap: 30px;
+      animation: fadeInUp 1s ease-in-out;
     }
 
-    .logos-container img {
-      height: 80px;
-      width: 80px;
+    .about-block {
+      background-color: rgba(0, 0, 30, 0.5);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 204, 255, 0.2);
+      width: 90%;
+      max-width: 600px;
+      transition: all 0.4s ease;
+    }
+
+    .about-block img {
+      height: 60px;
+      width: 60px;
       border-radius: 50%;
-      transition: transform 0.3s ease;
+      margin-bottom: 12px;
     }
 
-    .logos-container img:hover {
-      transform: scale(1.1);
+    .about-block h3 {
+      margin-bottom: 8px;
+      font-size: 1.4em;
+      color: #00ccff;
     }
 
-.community-logos.show {
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: all;
-}
+    .about-block p {
+      margin: 0 auto;
+      font-size: 0.95em;
+      color: #d0eaff;
+    }
 
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     footer {
@@ -155,7 +163,6 @@
       p { padding: 0 20px; }
     }
   </style>
-  
 </head>
 <body>
   <div class="overlay"></div>
@@ -163,37 +170,41 @@
     <h1>NORTH GROUPS</h1>
     <h2>Main gateway to North Groups Community</h2>
     <div class="counter">+10,000 ACTIVE MEMBERS</div>
-
     <div class="buttons">
-      <a href="#" class="btn">JOIN COMMUNITY</a>
+      <a href="#about">ABOUT US</a>
       <a href="#">NEWS</a>
-      <a href="#">ABOUT US</a>
+      <a href="#">JOIN COMMUNITY</a>
     </div>
-
     <div class="line-separator"></div>
 
-    <section class="community-logos" id="community-logos">
-      <div class="logos-container">
-        <a href="#"><img src="/assets/logo-green.png" alt="Green Group"></a>
-        <a href="#"><img src="/assets/logo-purple.png" alt="Purple Group"></a>
-        <a href="#"><img src="/assets/logo-blue.png" alt="Blue Group"></a>
-        <a href="#"><img src="/assets/logo-lightblue.png" alt="News Channel"></a>
-        <a href="#"><img src="/assets/logo-keskus.png" alt="Keskus Bar"></a>
+    <section class="about-section" id="about">
+      <div class="about-block">
+        <img src="/assets/logo-green.png" alt="North Talk">
+        <h3>North Talk</h3>
+        <p>Chat for open conversations and casual discussion.</p>
+      </div>
+      <div class="about-block">
+        <img src="/assets/logo-purple.png" alt="North Support">
+        <h3>North Support</h3>
+        <p>Report scammers and get help from our support team.</p>
+      </div>
+      <div class="about-block">
+        <img src="/assets/logo-orange.png" alt="North Raffle">
+        <h3>North Raffle</h3>
+        <p>Weekly raffles with a new winner every week.</p>
+      </div>
+      <div class="about-block">
+        <img src="/assets/logo-lightblue.png" alt="North News">
+        <h3>North News</h3>
+        <p>Stay updated with the latest news from the community.</p>
       </div>
     </section>
-<p>North Groups is the most popular Telegram dark community in Estonia. Founded in January 2024. Already over 10,000 active users.</p>
+
+    <p>North Groups is the most popular Telegram dark community in Estonia. Founded in January 2024. Already over 10,000 active users.</p>
+
     <footer>
       &copy; North Groups 2025. All rights reserved. Multilingual support coming soon.
     </footer>
   </main>
-
-  <script>
- document.querySelector('.buttons a.btn').addEventListener('click', function(e) {
-  e.preventDefault();
-  const logosBlock = document.getElementById('community-logos');
-  logosBlock.classList.add('show');
-  logosBlock.scrollIntoView({ behavior: 'smooth' });
-});
-</script>
 </body>
 </html>
