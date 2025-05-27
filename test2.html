@@ -1,289 +1,156 @@
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>North Safecheck</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet"/>
-<style>
-@keyframes fadeInLuxury {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-    filter: blur(6px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-    filter: blur(0);
-  }
-}
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet" />
+  <style>
+    @keyframes fadeInLuxury {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+        filter: blur(6px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+      }
+    }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-body {
-  font-family: 'Orbitron', sans-serif;
-  background: url('/assets/bg-runes.jpg') no-repeat center center fixed;
-  background-size: cover;
-  color: #e0f4ff;
-  text-align: center;
-}
+    body {
+      font-family: 'Orbitron', sans-serif;
+      background: url('/assets/bg-runes.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #e0f4ff;
+      text-align: center;
+    }
 
-.overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 30, 0.4);
-  z-index: 0;
-}
+    .overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 30, 0.4);
+      z-index: 0;
+    }
 
-main {
-  position: relative;
-  z-index: 1;
-  padding: 140px 20px 60px;
-}
+    main {
+      position: relative;
+      z-index: 1;
+      padding: 140px 20px 60px;
+    }
 
-h1 {
-  font-size: 3em;
-  font-weight: 700;
-  color: #00ccff;
-  margin-bottom: 0.3em;
-  text-shadow: 0 0 10px #00ccff80;
-}
+    h1 {
+      font-size: 3em;
+      font-weight: 700;
+      color: #00ccff;
+      margin-bottom: 0.3em;
+      text-shadow: 0 0 10px #00ccff80;
+    }
 
-h2 {
-  font-size: 1.2em;
-  font-weight: 400;
-  color: #b0d0f0;
-  margin-bottom: 1.5em;
-}
+    h2 {
+      font-size: 1.2em;
+      font-weight: 400;
+      color: #b0d0f0;
+      margin-bottom: 1.5em;
+    }
 
-.counter {
-  font-size: 1.1em;
-  margin-bottom: 2em;
-  color: #00ccff;
-  text-shadow: 0 0 6px #00ccff88;
-}
+    .buttons a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin: 10px;
+      padding: 14px 28px;
+      font-size: 1em;
+      color: #00ccff;
+      border: 1px solid #00ccff;
+      border-radius: 12px;
+      text-decoration: none;
+      background-color: transparent;
+      box-shadow: 0 0 10px #00ccff88;
+      transition: all 0.3s;
+      height: 52px;
+    }
 
-.buttons a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  margin: 10px;
-  padding: 14px 28px;
-  font-size: 1em;
-  color: #00ccff;
-  border: 1px solid #00ccff;
-  border-radius: 12px;
-  text-decoration: none;
-  background-color: transparent;
-  box-shadow: 0 0 10px #00ccff88;
-  transition: all 0.3s;
-  height: 52px;
-}
+    .buttons a:hover {
+      background-color: #00ccff;
+      color: #000;
+    }
 
-.buttons a:hover {
-  background-color: #00ccff;
-  color: #000;
-}
+    .about-block img,
+    .how-block img {
+      height: 60px;
+      width: 60px;
+      border-radius: 50%;
+      margin-bottom: 12px;
+    }
 
-.line-separator {
-  width: 30%;
-  height: 1px;
-  margin: 60px auto 20px;
-  background: rgba(0, 204, 255, 0.2);
-  box-shadow: 0 0 8px rgba(0, 204, 255, 0.15);
-}
+    .sponsors-section {
+      margin: 100px auto 60px;
+      text-align: center;
+      background-color: #000;
+      padding: 40px 0;
+    }
 
-p {
-  max-width: 700px;
-  margin: 60px auto 20px;
-  font-size: 1em;
-  line-height: 1.6;
-  color: #cce0f0;
-}
+    .sponsors-section h2 {
+      font-size: 1.4em;
+      color: #00ccff;
+      margin-bottom: 30px;
+    }
 
-.about-section,
-.join-section {
-  display: none;
-  margin-top: 40px;
-  flex-direction: column;
-  align-items: center;
-  gap: 30px;
-}
+    .sponsor-logos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: center;
+      gap: 40px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
 
-.about-block {
-  background-color: rgba(0, 0, 30, 0.5);
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 0 15px rgba(0, 204, 255, 0.2);
-  width: 90%;
-  max-width: 600px;
-  transition: all 0.4s ease;
-  opacity: 0;
-  cursor: pointer;
-}
+    .sponsor-logos img {
+      height: 40px;
+      max-width: 120px;
+      object-fit: contain;
+      filter: brightness(100%) grayscale(100%) contrast(120%);
+      opacity: 0.85;
+      transition: all 0.3s ease;
+    }
 
-.about-block:hover {
-  transform: scale(1.03);
-  box-shadow: 0 0 35px rgba(0, 204, 255, 0.5);
-  background-color: rgba(0, 0, 30, 0.65);
-}
+    .sponsor-logos img:hover {
+      opacity: 1;
+      transform: scale(1.05);
+    }
 
-.about-block img {
-  height: 60px;
-  width: 60px;
-  border-radius: 50%;
-  margin-bottom: 12px;
-}
+    footer {
+      margin-top: 60px;
+      padding: 20px;
+      font-size: 0.9em;
+      color: #888;
+    }
 
-.about-block h3 {
-  margin-bottom: 8px;
-  font-size: 1.4em;
-  color: #00ccff;
-}
-
-.about-block p {
-  margin: 0 auto;
-  font-size: 0.95em;
-  color: #d0eaff;
-}
-
-/* HOW section */
-.how-block {
-  background-color: rgba(0, 0, 30, 0.5);
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 0 15px rgba(0, 204, 255, 0.2);
-  width: 220px;
-  text-align: center;
-  transition: all 0.3s ease;
-  opacity: 0;
-}
-
-.how-block:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 25px rgba(0, 204, 255, 0.5);
-}
-
-.how-block img {
-  width: 70px;
-  height: 70px;
-  margin-bottom: 16px;
-}
-
-.how-block h3 {
-  color: #00ccff;
-  margin-bottom: 6px;
-  font-size: 1.2em;
-}
-
-.how-block p {
-  color: #cce0f0;
-  font-size: 0.95em;
-}
-
-/* SPONSORS section */
-.sponsors-section {
-  margin: 100px auto 60px;
-  text-align: center;
-  background-color: #000;
-  padding: 40px 0;
-}
-
-.sponsors-section h2 {
-  font-size: 1.4em;
-  color: #00ccff;
-  margin-bottom: 30px;
-}
-
-.sponsor-logos {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-  gap: 40px;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.sponsor-logos img {
-  height: 40px;
-  max-width: 120px;
-  object-fit: contain;
-  filter: brightness(100%) grayscale(100%) contrast(120%);
-  opacity: 0.85;
-  transition: all 0.3s ease;
-}
-
-.sponsor-logos img:hover {
-  opacity: 1;
-  transform: scale(1.05);
-}
-
-/* Footer */
-footer {
-  margin-top: 60px;
-  padding: 20px;
-  font-size: 0.9em;
-  color: #888;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  h1 {
-    font-size: 2.2em;
-  }
-
-  h2 {
-    font-size: 1em;
-  }
-
-  .buttons a {
-    padding: 12px 20px;
-    font-size: 0.95em;
-    height: auto;
-  }
-
-  .line-separator {
-    width: 60%;
-  }
-
-  p {
-    padding: 0 20px;
-  }
-
-  .how-steps {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .sponsor-logos {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .sponsor-logos img {
-    height: 36px;
-  }
-}
-
-</style>
-  
+    @media (max-width: 768px) {
+      h1 { font-size: 2.2em; }
+      h2 { font-size: 1em; }
+      .buttons a { padding: 12px 20px; font-size: 0.95em; height: auto; }
+      .sponsor-logos { flex-direction: column; gap: 20px; }
+      .sponsor-logos img { height: 36px; }
+    }
+  </style>
 </head>
-
-
 <body>
   <div class="overlay"></div>
   <main>
     <img src="/assets/logo-main.png" alt="North Groups Logo" style="height: 100px; margin-bottom: 20px;" />
-
     <h1>NORTH GROUPS</h1>
     <h2>Main gateway to North Groups Community</h2>
     <div class="buttons">
@@ -291,159 +158,19 @@ footer {
       <a href="#">NEWS</a>
       <a href="#about">ABOUT US</a>
     </div>
+    <!-- ... остальной контент сайта ... -->
 
-       <section class="join-section" id="join">
-     <div class="about-block" style="animation: fadeInLuxury 0.8s ease forwards; animation-delay: 0.1s;">
-  <img src="/assets/north-safecheck.png" alt="North Safecheck">
-  <h3>North Safecheck</h3>
-  <p>User database for checking legitimacy. Auto-bot works 24/7.</p>
-</div>
-
-<div class="about-block" style="animation: fadeInLuxury 0.8s ease forwards; animation-delay: 0.3s;">
-  <img src="/assets/main-groups.png" alt="Main Groups">
-  <h3>Main Groups</h3>
-  <p>Legacy project groups with the oldest and most loyal community members.</p>
-</div>
-
-<div class="about-block" style="animation: fadeInLuxury 0.8s ease forwards; animation-delay: 0.5s;">
-  <img src="/assets/bar-groups.png" alt="Bar Groups">
-  <h3>Bar Groups</h3>
-  <p>New network of three groups rebuilt after the legendary Bar groups were blocked.</p>
-</div>
-
-<div class="about-block" style="animation: fadeInLuxury 0.8s ease forwards; animation-delay: 0.7s;">
-  <img src="/assets/pixel-groups.png" alt="Pixel Groups">
-  <h3>Pixel Groups</h3>
-  <p>The first pixel-style communities. Youth-driven and full of new energy.</p>
-</div>
-
-<div class="about-block" style="animation: fadeInLuxury 0.8s ease forwards; animation-delay: 0.9s;">
-  <img src="/assets/bm-group.png" alt="BM Group">
-  <h3>BM Group</h3>
-  <p>The legendary Estonian group is active again under the North brand.</p>
-</div>
-
-<div class="about-block" style="animation: fadeInLuxury 0.8s ease forwards; animation-delay: 1.1s;">
-  <img src="/assets/silk-road.png" alt="Silk Road">
-  <h3>Silk Road</h3>
-  <p>We revived a legendary dark community — now reborn under our network.</p>
-</div>
-
-    </section>
-
-       <section class="about-section" id="about">
-      <div class="about-block" style="animation: fadeInLuxury 0.8s ease forwards; animation-delay: 0.1s;">
-        <img src="/assets/logo-green.png" alt="North Talk">
-        <h3>North Talk</h3>
-        <p>Chat for open conversations and casual discussion.</p>
-      </div>
-      <div class="about-block" style="animation: fadeInLuxury 0.8s ease forwards; animation-delay: 0.3s;">
-        <img src="/assets/logo-purple.png" alt="North Support">
-        <h3>North Support</h3>
-        <p>Report scammers and get help from our support team.</p>
-      </div>
-      <div class="about-block" style="animation: fadeInLuxury 0.8s ease forwards; animation-delay: 0.5s;">
-        <img src="/assets/logo-orange.png" alt="North Raffle">
-        <h3>North Raffle</h3>
-        <p>Weekly raffles with a new winner every week.</p>
-      </div>
-      <div class="about-block" style="animation: fadeInLuxury 0.8s ease forwards; animation-delay: 0.7s;">
-        <img src="/assets/logo-lightblue.png" alt="North News">
-        <h3>North News</h3>
-        <p>Stay updated with the latest news from the community.</p>
+    <section class="sponsors-section">
+      <h2>SPONSORS</h2>
+      <div class="sponsor-logos">
+        <img src="/assets/sponsors/logo1.jpg" alt="Sponsor 1" />
+        <img src="/assets/sponsors/logo2.jpg" alt="Sponsor 2" />
+        <img src="/assets/sponsors/logo3.jpg" alt="Sponsor 3" />
+        <img src="/assets/sponsors/logo4.jpg" alt="Sponsor 4" />
+        <img src="/assets/sponsors/logo5.jpg" alt="Sponsor 5" />
+        <!-- Добавь остальные логотипы -->
       </div>
     </section>
-
-    <section class="stats-section" style="margin: 60px auto; display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; max-width: 1000px;">
-      <div style="text-align: center; min-width: 120px;">
-        <div style="font-size: 2em; font-weight: 700; color: #00ccff;">+10,000</div>
-        <div style="color: #b0d0f0;">Active Members</div>
-      </div>
-      <div style="text-align: center; min-width: 120px;">
-        <div style="font-size: 2em; font-weight: 700; color: #00ccff;">2500</div>
-        <div style="color: #b0d0f0;">Banned Scammers</div>
-      </div>
-      <div style="text-align: center; min-width: 120px;">
-        <div style="font-size: 2em; font-weight: 700; color: #00ccff;">+16</div>
-        <div style="color: #b0d0f0;">Groups</div>
-      </div>
-      <div style="text-align: center; min-width: 120px;">
-        <div style="font-size: 2em; font-weight: 700; color: #00ccff;">Estonia 🇪🇪</div>
-        <div style="color: #b0d0f0;">Based Infrastructure</div>
-      </div>
-      <div style="text-align: center; min-width: 120px;">
-        <div style="font-size: 2em; font-weight: 700; color: #00ccff;">2024</div>
-        <div style="color: #b0d0f0;">Since</div>
-      </div>
-    </section>
-    <div class="line-separator"></div>
-
-<section class="how-section" id="how" style="margin: 100px auto 60px; max-width: 1000px; padding: 0 20px;">
-  <h2 style="text-align:center; font-size: 1.6em; color: #00ccff; margin-bottom: 40px;">HOW IT WORKS</h2>
-  <div class="how-steps" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px;">
-
-    <div class="how-block" style="animation: fadeInLuxury 0.8s ease forwards; animation-delay: 0.1s;">
-      <img src="/assets/how-step1-join.svg" alt="Join a Group" />
-      <h3>Join a Group</h3>
-      <p>Pick one of our Telegram clusters and join instantly.</p>
-    </div>
-
-    <div class="how-block" style="animation: fadeInLuxury 0.8s ease forwards; animation-delay: 0.3s;">
-      <img src="/assets/how-step2-verify.svg" alt="Verify via Bot" />
-      <h3>Verify via Safecheck</h3>
-      <p>Our bot checks your status anonymously and grants access.</p>
-    </div>
-
-    <div class="how-block" style="animation: fadeInLuxury 0.8s ease forwards; animation-delay: 0.5s;">
-      <img src="/assets/how-step3-explore.svg" alt="Explore & Connect" />
-      <h3>Explore & Connect</h3>
-      <p>Chat, trade, get updates. Stay secure inside the network.</p>
-    </div>
-
-  </div>
-</section>
-
-    <p>North Groups is the most popular Telegram dark community in Estonia. Founded in January 2024. Already over 10,000 active users.</p>
-
-    <footer>
-      &copy; North Groups 2025. All rights reserved. Multilingual support coming soon.
-    </footer>
-
-<section class="sponsors-section">
-  <h2>SPONSORS</h2>
-  <div class="sponsor-logos">
-    <img src="/assets/sponsors/logo1.jpg" alt="Sponsor 1" />
-    <img src="/assets/sponsors/logo2.jpg" alt="Sponsor 2" />
-    <img src="/assets/sponsors/logo3.jpg" alt="Sponsor 3" />
-    <img src="/assets/sponsors/logo4.jpg" alt="Sponsor 4" />
-    <img src="/assets/sponsors/logo5.jpg" alt="Sponsor 5" />
-    <!-- Добавь остальные по аналогии -->
-  </div>
-</section>
-
-    
   </main>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const aboutBtn = document.querySelector('a[href="#about"]');
-      const joinBtn = document.querySelector('a[href="#join"]');
-      const aboutSection = document.querySelector('.about-section');
-      const joinSection = document.querySelector('.join-section');
-
-      aboutBtn.addEventListener('click', function (e) {
-        e.preventDefault();
-        aboutSection.style.display = 'flex';
-        if (joinSection) joinSection.style.display = 'none';
-        window.scrollTo({ top: aboutSection.offsetTop - 60, behavior: 'smooth' });
-      });
-
-      joinBtn.addEventListener('click', function (e) {
-        e.preventDefault();
-        joinSection.style.display = 'flex';
-        if (aboutSection) aboutSection.style.display = 'none';
-        window.scrollTo({ top: joinSection.offsetTop - 60, behavior: 'smooth' });
-      });
-    });
-  </script>
 </body>
 </html>
