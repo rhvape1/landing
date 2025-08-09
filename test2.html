@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -143,60 +143,45 @@ p {
   .line-separator { width: 60%; }
   p { padding: 0 20px; }
 }
-
-.how-block {
-  background-color: rgba(0, 0, 30, 0.5);
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 0 15px rgba(0, 204, 255, 0.2);
-  width: 220px;
-  text-align: center;
-  transition: all 0.3s ease;
-  opacity: 0;
-}
-.how-block:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 25px rgba(0, 204, 255, 0.5);
-}
-.how-block img {
-  width: 70px;
-  height: 70px;
-  margin-bottom: 16px;
-}
-.how-block h3 {
-  color: #00ccff;
-  margin-bottom: 6px;
-  font-size: 1.2em;
-}
-.how-block p {
-  color: #cce0f0;
-  font-size: 0.95em;
-}
-@media (max-width: 768px) {
-  .how-steps {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-    
   </style>
 </head>
-
-
 <body>
   <div class="overlay"></div>
   <main>
-    <img src="/assets/logo-main.png" alt="North Groups Logo" style="height: 100px; margin-bottom: 20px;" />
-
     <h1>NORTH GROUPS</h1>
     <h2>Main gateway to North Groups Community</h2>
+    <div class="counter">+10,000 ACTIVE MEMBERS</div>
     <div class="buttons">
       <a href="#join">JOIN COMMUNITY</a>
-      <a href="#">NEWS</a>
-      <a href="#about">ABOUT US</a>
+      <a href="#">NEWS</a>  
+      <a href="#about">ABOUT US</a>   
     </div>
+    <div class="line-separator"></div>
 
-       <section class="join-section" id="join">
+    <section class="about-section" id="about">
+      <div class="about-block" style="animation: fadeInLuxury 0.8s ease forwards; animation-delay: 0.1s;">
+        <img src="/assets/logo-green.png" alt="North Talk">
+        <h3>North Talk</h3>
+        <p>Chat for open conversations and casual discussion.</p>
+      </div>
+      <div class="about-block" style="animation: fadeInLuxury 0.8s ease forwards; animation-delay: 0.3s;">
+        <img src="/assets/logo-purple.png" alt="North Support">
+        <h3>North Support</h3>
+        <p>Report scammers and get help from our support team.</p>
+      </div>
+      <div class="about-block" style="animation: fadeInLuxury 0.8s ease forwards; animation-delay: 0.5s;">
+        <img src="/assets/logo-orange.png" alt="North Raffle">
+        <h3>North Raffle</h3>
+        <p>Weekly raffles with a new winner every week.</p>
+      </div>
+      <div class="about-block" style="animation: fadeInLuxury 0.8s ease forwards; animation-delay: 0.7s;">
+        <img src="/assets/logo-lightblue.png" alt="North News">
+        <h3>North News</h3>
+        <p>Stay updated with the latest news from the community.</p>
+      </div>
+    </section>
+
+    <section class="join-section" id="join">
      <div class="about-block" style="animation: fadeInLuxury 0.8s ease forwards; animation-delay: 0.1s;">
   <img src="/assets/north-safecheck.png" alt="North Safecheck">
   <h3>North Safecheck</h3>
@@ -234,78 +219,6 @@ p {
 </div>
 
     </section>
-
-       <section class="about-section" id="about">
-      <div class="about-block" style="animation: fadeInLuxury 0.8s ease forwards; animation-delay: 0.1s;">
-        <img src="/assets/logo-green.png" alt="North Talk">
-        <h3>North Talk</h3>
-        <p>Chat for open conversations and casual discussion.</p>
-      </div>
-      <div class="about-block" style="animation: fadeInLuxury 0.8s ease forwards; animation-delay: 0.3s;">
-        <img src="/assets/logo-purple.png" alt="North Support">
-        <h3>North Support</h3>
-        <p>Report scammers and get help from our support team.</p>
-      </div>
-      <div class="about-block" style="animation: fadeInLuxury 0.8s ease forwards; animation-delay: 0.5s;">
-        <img src="/assets/logo-orange.png" alt="North Raffle">
-        <h3>North Raffle</h3>
-        <p>Weekly raffles with a new winner every week.</p>
-      </div>
-      <div class="about-block" style="animation: fadeInLuxury 0.8s ease forwards; animation-delay: 0.7s;">
-        <img src="/assets/logo-lightblue.png" alt="North News">
-        <h3>North News</h3>
-        <p>Stay updated with the latest news from the community.</p>
-      </div>
-    </section>
-
-    <section class="stats-section" style="margin: 60px auto; display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; max-width: 1000px;">
-      <div style="text-align: center; min-width: 120px;">
-        <div style="font-size: 2em; font-weight: 700; color: #00ccff;">+10,000</div>
-        <div style="color: #b0d0f0;">Active Members</div>
-      </div>
-      <div style="text-align: center; min-width: 120px;">
-        <div style="font-size: 2em; font-weight: 700; color: #00ccff;">2500</div>
-        <div style="color: #b0d0f0;">Banned Scammers</div>
-      </div>
-      <div style="text-align: center; min-width: 120px;">
-        <div style="font-size: 2em; font-weight: 700; color: #00ccff;">+16</div>
-        <div style="color: #b0d0f0;">Groups</div>
-      </div>
-      <div style="text-align: center; min-width: 120px;">
-        <div style="font-size: 2em; font-weight: 700; color: #00ccff;">Estonia 🇪🇪</div>
-        <div style="color: #b0d0f0;">Based Infrastructure</div>
-      </div>
-      <div style="text-align: center; min-width: 120px;">
-        <div style="font-size: 2em; font-weight: 700; color: #00ccff;">2024</div>
-        <div style="color: #b0d0f0;">Since</div>
-      </div>
-    </section>
-    <div class="line-separator"></div>
-
-<section class="how-section" id="how" style="margin: 100px auto 60px; max-width: 1000px; padding: 0 20px;">
-  <h2 style="text-align:center; font-size: 1.6em; color: #00ccff; margin-bottom: 40px;">HOW IT WORKS</h2>
-  <div class="how-steps" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px;">
-
-    <div class="how-block" style="animation: fadeInLuxury 0.8s ease forwards; animation-delay: 0.1s;">
-      <img src="/assets/how-step1-join.svg" alt="Join a Group" />
-      <h3>Join a Group</h3>
-      <p>Pick one of our Telegram clusters and join instantly.</p>
-    </div>
-
-    <div class="how-block" style="animation: fadeInLuxury 0.8s ease forwards; animation-delay: 0.3s;">
-      <img src="/assets/how-step2-verify.svg" alt="Verify via Bot" />
-      <h3>Verify via Safecheck</h3>
-      <p>Our bot checks your status anonymously and grants access.</p>
-    </div>
-
-    <div class="how-block" style="animation: fadeInLuxury 0.8s ease forwards; animation-delay: 0.5s;">
-      <img src="/assets/how-step3-explore.svg" alt="Explore & Connect" />
-      <h3>Explore & Connect</h3>
-      <p>Chat, trade, get updates. Stay secure inside the network.</p>
-    </div>
-
-  </div>
-</section>
 
     <p>North Groups is the most popular Telegram dark community in Estonia. Founded in January 2024. Already over 10,000 active users.</p>
 
